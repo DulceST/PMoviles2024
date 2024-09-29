@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -29,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
       keyboardType: TextInputType.text,
       obscureText: true,
       controller: conPwd,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         prefixIcon: Icon(Icons.password)
       ),
     );
@@ -40,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
         width: MediaQuery.of(context).size.width*.9,
         //margin: EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
-          color: Colors.grey,
+          color: const Color.fromARGB(255, 247, 247, 243),
           borderRadius: BorderRadius.circular(10)
         ),
         child: ListView(
@@ -58,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
       bottom: 40,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.blue[200]
+          backgroundColor: const Color.fromARGB(255, 255, 200, 238)
         ),
         onPressed: (){
           isLoading = true;
@@ -87,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
         decoration: const BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage('assets/halo.png')
+            image: AssetImage('assets/fondo.jpeg')
           )
         ),
         child: Stack(
@@ -95,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             Positioned(
               top: 100,
-              child: Image.asset('assets/halo_logo.png', width: 180,)
+              child: Image.asset('assets/logo.png', width: 180,)
             ),
             ctnCredentials,
             btnLogin,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pmsn2024b/database/movies_database.dart';
 import 'package:pmsn2024b/models/moviesdao.dart';
 import 'package:pmsn2024b/settings/global_values.dart';
@@ -62,7 +61,7 @@ class _MovieViewItemState extends State<MovieViewItem> {
                       ]
                     );
                   },
-                  icon: Icon(Icons.edit)),
+                  icon: const Icon(Icons.edit)),
               IconButton(
                   onPressed: () {
                     moviesDatabase!
@@ -89,10 +88,10 @@ class _MovieViewItemState extends State<MovieViewItem> {
                       }
                     });
                   },
-                  icon: Icon(Icons.delete)),
+                  icon: const Icon(Icons.delete)),
             ],
           ),
-          Divider(),
+          const Divider(),
           Text(widget.moviesDAO.overview!),
         ],
       ),

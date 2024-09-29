@@ -1,7 +1,5 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
 import 'package:pmsn2024b/screens/profile_screen.dart';
 import 'package:pmsn2024b/settings/colors_settings.dart';
@@ -27,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             onPressed: (){}, 
-            icon: Icon(Icons.access_alarm_outlined)
+            icon: const Icon(Icons.access_alarm_outlined)
           ),
           GestureDetector(
             onTap: (){},
@@ -40,8 +38,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Builder(builder: (context) {
         switch (index) {
-          case 1: return ProfileScreen();
-          default: return ProfileScreen();
+          case 1: return const ProfileScreen();
+          default: return const ProfileScreen();
         }
       },),
       //endDrawer: Drawer(),
@@ -90,11 +88,18 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           ListTile(
             onTap: () => Navigator.pushNamed(context, '/db'),
-            title: Text('Movies List'),
-            subtitle: Text('Database of movies'),
-            leading: Icon(Icons.movie),
-            trailing: Icon(Icons.chevron_right),
+            title: const Text('Movies List'),
+            subtitle: const Text('Database of movies'),
+            leading: const Icon(Icons.movie),
+            trailing: const Icon(Icons.chevron_right),
+          ),ListTile(
+            onTap: () => Navigator.pushNamed(context, '/db'),
+            title: const Text('Practica 1'),
+            subtitle: const Text('Practica 1: Challenge '),
+            leading: const Icon(Icons.pets),
+            trailing: const Icon(Icons.chevron_right),
           )
+          ,
         ],
       ),
     );

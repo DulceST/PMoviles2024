@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pmsn2024b/screens/home_screen.dart';
 import 'package:pmsn2024b/screens/login_screen.dart';
 import 'package:pmsn2024b/screens/movies_screen.dart';
+import 'package:pmsn2024b/screens/profile_screen.dart';
 import 'package:pmsn2024b/settings/global_values.dart';
 import 'package:pmsn2024b/settings/theme_settings.dart';
 
@@ -19,13 +19,14 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'Material App',
           debugShowCheckedModeBanner: false,
-          home: HomeScreen(),
+          home: const LoginScreen(),
           theme: value 
             ? ThemeSettings.darkTheme() 
             : ThemeSettings.ligthTheme(),
           routes: {
-            "/home" : (context) => HomeScreen(),
-            "/db" : (context) => MoviesScreen()
+            "/home" : (context) => const HomeScreen(),
+            "/db" : (context) => const MoviesScreen(),
+            "profile" : (context) => const ProfileScreen()
           },
         );
       }
